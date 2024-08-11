@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.gradient-background {
+    /* background: linear-gradient(300deg, #2a2a2a, #949494, #f6f6f6); */
+    background: linear-gradient(300deg, #80BCBD , #AAD9BB, #D5F0C1, #F9F7C9);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #f0f2f5; */
+    /* background-color: rgb(200, 192, 192); */
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.calculator {
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 0 20px black;
+    overflow: hidden;
+    width: 300px;
+    background-color: #fff;
+}
+
+.display {
+    /* background-color: #3e3e3e; */
+    background-color: #06141b;
+    color: #fff;
+    text-align: right;
+    padding: 20px;
+    font-size: 2em;
+    box-sizing: border-box;
+}
+
+.expression {
+    font-size: 0.5em;
+    color: #a9a9a9;
+}
+
+.result {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: #CCD0CF;
+    border: none;
+    padding: 20px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn:hover {
+    background-color: #9babab;
+}
+
+.operator {
+    background-color: #4a5c6a;
+    color: #fff;
+}
+
+.operator:hover {
+    background-color: #253745;
+}
+
+.equals {
+    background-color: #4a5c6a;
+    color: #fff;
+    grid-row: span 2;
+}
+
+.equals:hover {
+    background-color: #253745;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+footer{
+    border-top: 1px solid grey;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-family: 'Kanit', sans-serif;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
